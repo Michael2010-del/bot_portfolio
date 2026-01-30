@@ -137,8 +137,8 @@ class DB_Manager:
     
     def delete_skill(self, project_id, skill_id):
         sql = """
-        DELETE FROM project_skills 
-        WHERE project_id = ? AND skill_id = ? 
+        DELETE FROM skills 
+        WHERE skill_id = ? AND project_id = ? 
         """
         self.__executemany(sql, [(skill_id, project_id)])
 
